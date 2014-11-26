@@ -15,7 +15,7 @@
  *
  */
 var TestGrid = function() {
-
+    var DISPLAY_STEPS = 1000;
     /**
    * Maximum number of latest executions available for selecting
    * in combobox.
