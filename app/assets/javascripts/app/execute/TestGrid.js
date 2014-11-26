@@ -448,6 +448,7 @@ var TestGrid = function() {
 
             //Ext.Msg.hide();
             fitToFrame: true
+            overflow: scroll;
                 //autoScroll: true
         },
 
