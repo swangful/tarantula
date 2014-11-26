@@ -15,7 +15,7 @@
  *
  */
 var TestGrid = function() {
-    var DISPLAY_STEPS = 1000;
+
     /**
    * Maximum number of latest executions available for selecting
    * in combobox.
@@ -319,8 +319,6 @@ var TestGrid = function() {
 
                 height: 550, //function() {return 100;}
                 maxHeight: 550 //function() {return 100;}
-                fitToFrame: true
-                autoScroll: true
             });
 
             grid.on('afteredit', function(e) {
@@ -449,7 +447,8 @@ var TestGrid = function() {
             }
 
             //Ext.Msg.hide();
-
+            fitToFrame: true
+                //autoScroll: true
         },
 
         /**
