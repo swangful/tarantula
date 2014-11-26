@@ -319,6 +319,8 @@ var TestGrid = function() {
 
                 height: 550, //function() {return 100;}
                 maxHeight: 550 //function() {return 100;}
+                fitToFrame: true
+                autoScroll: true
             });
 
             grid.on('afteredit', function(e) {
