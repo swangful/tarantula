@@ -538,5 +538,4 @@ class Case < ActiveRecord::Base
     attribute   :preconditions_and_assumptions, 'Preconditions & Assumptions'
     children    :steps
   end
-  
 end
