@@ -8,8 +8,7 @@
   <br/>
   <%= radio_button_tag 'export_type', 'execution' %> Executions
   <br/>
-    <%= radio_button_tag 'export_type', 'case', true, 
-      options_for_select(Case.all.collect { |s| s.title }) %> Single Case Test
+    <%= select_tag('Single Case', options_for_select(Case.all.collect { |s| s.title })) %>
   <br/>
   <br/>
   <br/>
