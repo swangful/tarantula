@@ -10,7 +10,7 @@
   <br/>
   <%= radio_button_tag 'export_type', 'case', true %> Single Case
   <br/>
-  <%= select_tag('Single Case', options_for_select(Case.all.collect { |s| s.title })) %>
+  <%= select_tag options_for_select(Case.all.collect { |s| s.title })) %> Single Case Dropdown
   <br/>
   <br/>
   <br/>
