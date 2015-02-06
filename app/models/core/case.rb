@@ -524,7 +524,13 @@ class Case < ActiveRecord::Base
     end
   end
 
-  define_csv do
+  define_csv  
+  # if user selects radio 'single case' 
+  # then check user's selected case 
+  # match to existing case title
+  # then export
+  # else
+  # print single case not found
     attribute   :id,            'Case Id', :identifier => true
     attribute   :title,         'Title'
     attribute   :date,          'Date'
