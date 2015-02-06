@@ -8,6 +8,10 @@
   <br/>
   <%= radio_button_tag 'export_type', 'execution' %> Executions
   <br/>
+    <%= radio_button_tag 'export_type', 'case', true, 
+      options_for_select(Case.all.collect { |s| s.title }) %> Single Case Test
+  <br/>
+  <br/>
   <br/>
   Recursion depth
   <%= select_tag 'recursion', 
