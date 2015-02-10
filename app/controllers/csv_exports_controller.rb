@@ -13,8 +13,6 @@ class CsvExportsController < ApplicationController
     klass = params[:export_type].camelcase.constantize
     if @test_area
       records = @test_area.send(klass.to_s.downcase.pluralize.to_sym).send(:active)
-    elsif @csv_exports_path
-      records = klass.active.where(:title_id => @title.id)
     else
       records = klass.active.where(:project_id => @project.id)
     end
