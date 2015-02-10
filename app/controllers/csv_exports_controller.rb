@@ -20,10 +20,13 @@ class CsvExportsController < ApplicationController
     csv = klass.to_csv(';', "\r\n", :recurse => params[:recursion].to_i,
           :export_without_ids => !params[:export_without_ids].blank?) { records }
     
+    single_csv = klass.to_csv(';', "\r\n", :recurse => params[:recursion].to_i,
+          :export_without_ids => !params[:export_without_ids].blank?) { s.title }
+
     #if a user selects single case radio and selects a case
     #then send the user the csv file with the selected case only
     if :export_type = "single_case"
-      send_data csv, :options = {s.title}
+      send_data single_csv, 
                     :filename => "#{params[:export_type]}_export.csv",
                     :disposition => 'attachment'
     else
